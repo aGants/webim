@@ -4,22 +4,26 @@ $screen-lg: 1200px;
 
 $main-color: #fff;
 $second-color: #eff4f4;
+$highlight-color: #2cd3b8;
+
 $title-color: #393e6b;
 $text-color: #74757b;
 $link-color: #0da088;
+
 
 $font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 
 %title-font {
   font: bold 36px $font-family;
-  letter-spacing: 25px;
+  // letter-spacing: 25px;
+  text-transform: uppercase;
   color: $title-color;
 }
 
 %text-font {
   font: normal $font-family 16px;
-  letter-spacing: 25px;
+  // letter-spacing: 25px;
   color: $text-color;
   line-height: 24px;
 }

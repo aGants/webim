@@ -3,11 +3,13 @@
   background: $main-color;
   box-shadow: 15px 0px 7px 3px rgba(50, 50, 50, 0.25);
 
-  &-content{
+  &-container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    width: 1540px;
     padding: 39px 0 35px;
+    margin: 0 auto;
   }
 
   &-singup {

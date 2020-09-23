@@ -49,7 +49,7 @@ function buildStyles() {
     .pipe(concat('style.css'))
     .pipe(postcss([
       autoprefixer(),
-      cssnano()
+      // cssnano()
     ]))
     .pipe(dest('build/styles/'));
 }
@@ -70,8 +70,8 @@ function clearBuild() {
 }
 
 function watchFiles() {
-  watch('src/pages/*.pug', buildPages);
-  watch('src/styles/*.scss', buildStyles);
+  watch('src/pages/**/*.pug', buildPages);
+  watch('src/styles/**/*.scss', buildStyles);
   watch('src/images/**/*.*', buildImages);
   watch('src/images/**/*.*', buildFonts);
 }
