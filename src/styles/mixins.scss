@@ -28,11 +28,11 @@
 
 //скроет на мобильном
 .mod-no-sm {
-  @include w-to($screen-md) {display: none !important;}
+  @include w-to($screen-lg) {display: none !important;}
 }
 
 .mod-only-sm {
-  @include w-from($screen-md) {display: none !important;}
+  @include w-from($screen-lg) {display: none !important;}
 }
 
 .mod-only-lg {
