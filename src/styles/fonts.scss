@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Ubuntu'), 
+    url('../fonts/ubuntu.woff2') format('woff2'), 
+    url('../fonts/ubuntu.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'icons';
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('../fonts/fontello.woff2?46867886') format('woff2'),
+  url('../fonts/fontello.woff?46867886') format('woff');
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?88664942');
+  src: url('../font/fontello.eot?88664942#iefix') format('embedded-opentype'),
+      url('../font/fontello.woff2?88664942') format('woff2'),
+      url('../font/fontello.woff?88664942') format('woff'),
+      url('../font/fontello.ttf?88664942') format('truetype'),
+      url('../font/fontello.svg?88664942#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+}
+
+%icon-1 {
+  &:before {
+  font-family: 'icons';
+  content: '\e800';
+  }
+}
+
+%icon-2 {
+  &:before {
+    font-family: 'icons';
+    content: '\e801';
+  }
+}
+
+%icon-app {
+  &:before {
+    font-family: 'icons';
+    content: '\e802';
+  }
+}
+
+%icon-chatbots {
+  &:before {
+    font-family: 'icons';
+    content: '\e803';
+  }
+}
+
+%icon-email {
+  &:before {
+    font-family: 'icons';
+    content: '\e804';
+  }
+}
+
+%icon-feedback {
+  &:before {
+    font-family: 'icons';
+    content: '\e805';
+  }
+}
+
+%icon-msn {
+  &:before {
+    font-family: 'icons';
+    content: '\e806';
+  }
+}
+
+%icon-sn {
+  &:before {
+    font-family: 'icons';
+    content: '\e807';
+  }
+}
+
+%icon-step-1 {
+  &:before {
+    font-family: 'icons';
+    content: '\e808';
+  }
+}
+
+%icon-step-2 {
+  &:before {
+    font-family: 'icons';
+    content: '\e809';
+  }
+}
+
+%icon-step-3 {
+  &:before {
+    font-family: 'icons';
+    content: '\e80a';
+  }
+}
+
+%icon-step-4 {
+  &:before {
+    font-family: 'icons';
+    content: '\e80b';
+  }
+}
+
+%icon-step-5 {
+  &:before {
+    font-family: 'icons';
+    content: '\e80c';
+  }
+}
+
+%icon-step-6 {
+  &:before {
+    font-family: 'icons';
+    content: '\e80d';
+  }
+}
