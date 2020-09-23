@@ -1,7 +1,8 @@
 @import 'vars', 'mixins', 'fonts', 
 'parts/header',
 'parts/toinstall',
-'parts/easysteps';
+'parts/easysteps',
+'parts/installing';
 
 * {
   padding: 0;
@@ -38,4 +39,8 @@ body {
 
 .link {
   @extend %link-font;
+}
+
+strong::before {
+  content: ' ';
 }

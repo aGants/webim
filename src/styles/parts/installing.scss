@@ -1,0 +1,40 @@
+$marker-distantion: 29px;
+
+.installing {
+  &-list {
+    margin-left: $marker-distantion;
+    list-style: none;
+    &__link {
+      font-size: 24px;
+      letter-spacing: .1px;
+      &::before {
+        content: "\2022";
+        position: relative;
+        right: $marker-distantion;
+        font-weight: bold;
+        color: $title-color;
+      }
+    }
+    &__text {
+      width: 790px;
+      margin: 17px 10px 54px;
+      line-height: 20px;
+    }
+  }
+  &-html {
+    padding: 80px 0 30px;
+    background: $second-color;
+    &__title {
+      margin-bottom: 70px;
+    }
+  }
+  &-app {
+    padding: 43px 0 35px;
+    &__title {
+      white-space: pre-line;
+    }
+    &__subtitle {
+      margin: 27px 0 70px;
+    }
+  }
+}
