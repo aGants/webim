@@ -49,14 +49,14 @@
 }
 
 %icon-1 {
-  &:before {
+  &:after {
   font-family: 'icons';
   content: '\e800';
   }
 }
 
 %icon-2 {
-  &:before {
+  &:after {
     font-family: 'icons';
     content: '\e801';
   }
