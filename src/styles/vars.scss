@@ -1,0 +1,27 @@
+$screen-sm: 320px;
+$screen-lg: 1200px;
+$screen-xl: 1680px;
+
+$title-color: #393e6b;
+$text-color: #74757b;
+$link-color: #0da088;
+$font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+
+
+%title-font {
+  font: bold 36px $font-family;
+  letter-spacing: 25px;
+  color: $title-color;
+}
+
+%text-font {
+  font: normal $font-family 16px;
+  letter-spacing: 25px;
+  color: $text-color;
+  line-height: 24px;
+}
+
+%link-font {
+  font: normal 36px $font-family;
+  color: $link-color;
+}
