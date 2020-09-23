@@ -29,8 +29,14 @@ function devServer() {
   });
 }
 
+function errorHandler(errors) {
+  console.warn('Error!');
+  console.warn(errors);
+}
+
 function buildPages() {
   return src('src/pages/index.pug')
+    .pipe(plumber({ errorHandler }))
     .pipe(pug({pretty: true}))
     .pipe(typograf({locale: ['ru', 'en-US'] }))
     .pipe(dest('build/'));
@@ -38,6 +44,7 @@ function buildPages() {
 
 function buildStyles() {
   return src('src/styles/style.scss')
+    .pipe(plumber({ errorHandler }))
     .pipe(sass())
     .pipe(concat('style.css'))
     .pipe(postcss([
@@ -53,12 +60,6 @@ function buildImages() {
     .pipe(dest('build/images/'));
 }
 
-function buildScripts() {
-  return src('src/scripts/**/*.js')
-    .pipe(uglify())
-    .pipe(dest('build/scripts/'));
-}
-
 function buildFonts() {
   return src('src/fonts/**/*.*')
     .pipe(dest('build/fonts/'));
@@ -71,9 +72,8 @@ function clearBuild() {
 function watchFiles() {
   watch('src/pages/*.pug', buildPages);
   watch('src/styles/*.scss', buildStyles);
-  watch('src/scripts/**/*.js', buildScripts);
-  watch('src/images/**/*.*', buildFonts);
   watch('src/images/**/*.*', buildImages);
+  watch('src/images/**/*.*', buildFonts);
 }
 
 exports.pages = ghPages;
@@ -83,7 +83,7 @@ exports.default =
     parallel(
       devServer,
       series(
-        parallel(buildPages, buildStyles, buildScripts, buildImages, buildFonts),
+        parallel(buildPages, buildStyles, buildImages, buildFonts),
         watchFiles
       )
     )

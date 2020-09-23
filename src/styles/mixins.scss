@@ -1,0 +1,40 @@
+@import 'vars.scss';
+
+//начиная с какого-то экрана
+@mixin w-from($screen) {
+  @media (min-width: $screen) {
+    @content;
+  }
+}
+
+//до какого-то экрана
+@mixin w-to($screen) {
+  @media (max-width: $screen - 1px) {
+    @content;
+  }
+}
+
+//2 размера экрана, не включая
+@mixin w-range($screen1, $screen2) {
+  @media (min-width: $screen1) and (max-width: $screen2 - 1px) {
+    @content;
+  }
+}
+
+//скроет блок на дестопе и выше
+.mod-no-lg {
+  @include w-from($screen-lg) {display: none !important;}
+}
+
+//скроет на мобильном
+.mod-no-sm {
+  @include w-to($screen-md) {display: none !important;}
+}
+
+.mod-only-sm {
+  @include w-from($screen-md) {display: none !important;}
+}
+
+.mod-only-lg {
+  @include w-to($screen-lg) {display: none !important;}
+}
