@@ -16,14 +16,15 @@ $font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 %title-font {
   font: bold 36px $font-family;
-  // letter-spacing: 25px;
+  line‑height: 20px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: $title-color;
 }
 
 %text-font {
-  font: normal $font-family 16px;
-  // letter-spacing: 25px;
+  font: normal 16px $font-family;
+  letter-spacing: .4px;
   color: $text-color;
   line-height: 24px;
 }
@@ -39,6 +40,7 @@ $font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
   text-decoration: none;
   color: $title-color;
   font: normal $font-family 16px;
+  letter-spacing: .4px;
   &:hover {
     @extend %hover;  
   }

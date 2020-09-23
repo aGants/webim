@@ -16,3 +16,12 @@ body {
   margin: 0 auto;
 }
 
+.button {
+  width: 258px;
+  padding: 15px 25px;
+  font: bold 14.4px $font-family;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 24px;
+  cursor: pointer;
+}

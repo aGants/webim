@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), 
+    url('../fonts/ubuntubold.woff2') format('woff2'),
+    url('../fonts/ubuntubold.woff') format('woff');
+}
+
+@font-face {
   font-family: 'icons';
   font-weight: normal;
   font-style: normal;

@@ -1,0 +1,26 @@
+.install {
+  padding: 74px 0 69px;
+  background: $second-color;
+  &__title {
+    @extend %title-font;
+  }
+  &__text {
+    @extend %text-font;
+    width: 650px;
+    margin: 30px 0 55px;
+  }
+  &-buttons {
+    display: flex;
+    gap: 19px;
+    &__free {
+      color: $main-color;
+      background: $highlight-color;
+      border-color: $highlight-color;
+    }
+    &__tarif {
+      background: $second-color;
+      color: $title-color;
+      border-color: $title-color;
+    }
+  }
+}
