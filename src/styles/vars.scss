@@ -1,12 +1,14 @@
+
 $screen-sm: 320px;
 $screen-lg: 1200px;
-$screen-xl: 1680px;
 
+$main-color: #fff;
+$second-color: #eff4f4;
 $title-color: #393e6b;
 $text-color: #74757b;
 $link-color: #0da088;
-$font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
+$font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 %title-font {
   font: bold 36px $font-family;
@@ -24,4 +26,19 @@ $font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 %link-font {
   font: normal 36px $font-family;
   color: $link-color;
+}
+
+%singup-link {
+  text-transform: uppercase;
+  font: normal 18px $font-family;
+  text-decoration: none;
+  color: $title-color;
+  font: normal $font-family 16px;
+  &:hover {
+    @extend %hover;  
+  }
+}
+
+%hover {
+  filter: saturate(300%);
 }
