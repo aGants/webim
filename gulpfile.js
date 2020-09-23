@@ -49,7 +49,7 @@ function buildStyles() {
     .pipe(concat('style.css'))
     .pipe(postcss([
       autoprefixer(),
-      // cssnano()
+      cssnano()
     ]))
     .pipe(dest('build/styles/'));
 }
