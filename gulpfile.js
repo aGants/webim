@@ -11,7 +11,6 @@ const postcss      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano      = require('cssnano');
 const imagemin     = require('gulp-imagemin');
-const typograf     = require('gulp-typograf');
 const uglify       = require('gulp-uglify-es').default;
 const concat       = require('gulp-concat');
 
@@ -38,7 +37,6 @@ function buildPages() {
   return src('src/pages/index.pug')
     .pipe(plumber({ errorHandler }))
     .pipe(pug({pretty: true}))
-    .pipe(typograf({locale: ['ru', 'en-US'] }))
     .pipe(dest('build/'));
 }
 
