@@ -2,7 +2,8 @@
 'parts/header',
 'parts/toinstall',
 'parts/easysteps',
-'parts/installing';
+'parts/installing',
+'parts/after';
 
 * {
   padding: 0;
@@ -31,12 +32,28 @@ body {
   }
 }
 
+.free {
+  color: $main-color;
+  background: $highlight-color;
+  border: 1px solid $highlight-color;
+
+  &:hover {
+    color: $main-color;
+    background: $link-color;
+    border-color: $link-color;
+  }
+}
+
 .title {
   @extend %title-font;
 }
 
 .text {
   @extend %text-font;
+}
+
+.big-text {
+  @extend %big-text;
 }
 
 .link {
