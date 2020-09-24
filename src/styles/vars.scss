@@ -23,8 +23,15 @@ $font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 %text-font {
   font: normal 16px $font-family;
-  letter-spacing: .4px;
+  letter-spacing: .8px;
   color: $text-color;
+  line-height: 24px;
+}
+
+%big-text {
+  font: normal 18px $font-family;
+  letter-spacing: .4px;
+  color: $title-color;
   line-height: 24px;
 }
 
