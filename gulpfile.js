@@ -73,7 +73,7 @@ function watchFiles() {
   watch('src/pages/**/*.pug', buildPages);
   watch('src/styles/**/*.scss', buildStyles);
   watch('src/images/**/*.*', buildImages);
-  watch('src/images/**/*.*', buildFonts);
+  watch('src/fonts/*.*', buildFonts);
 }
 
 exports.pages = ghPages;
