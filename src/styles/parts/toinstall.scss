@@ -14,12 +14,22 @@
     &__free {
       color: $main-color;
       background: $highlight-color;
-      border-color: $highlight-color;
+      border: 1px solid $highlight-color;
+      &:hover {
+        color: $main-color;
+        background: $link-color;
+        border-color: $link-color;
+      }
     }
     &__tarif {
       background: $second-color;
       color: $title-color;
-      border-color: $title-color;
+      border: 1px solid $title-color;
+      &:hover {
+        background: $title-color;
+        color: $second-color;
+        border-color: $second-color;
+      }
     }
   }
 }
