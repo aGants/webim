@@ -1,0 +1,47 @@
+.contacts {
+  padding: 65px 0 98px;
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 133px;
+    margin-top: 35px;
+    padding-left: 72px;
+    &__icon {
+      margin-bottom: -10px;
+      &::before {
+        position: relative;
+        top: 35px;
+        right: 67px;
+        text-decoration: none;
+        font-size: 40px;
+      }
+    }
+    &__link {
+      width: 220px;
+      line-height: 25px;
+    }
+  }
+}
+
+.soc { @extend %icon-sn; color: #3b4269;}
+.feedback { @extend %icon-feedback; color: #dab81a;}
+.mobile { @extend %icon-app; color: #88bc17; }
+.msn { @extend %icon-msn; color: #3dd3a1;}
+.yandex { @extend %icon-msn;}
+.email { 
+  @extend %icon-email; 
+  margin-top: 20px;
+  &:before {
+    top: 26px;
+    color: #fff;
+    font-size: 23px;
+    background: #5f98d1;
+    padding: 8px;
+    border-radius: 30px;  
+  } 
+}
+.chat { 
+  @extend %icon-chatbots; 
+  margin-top: 23px; 
+  color: #33afd1;
+}

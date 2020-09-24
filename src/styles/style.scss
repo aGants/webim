@@ -3,7 +3,8 @@
 'parts/toinstall',
 'parts/easysteps',
 'parts/installing',
-'parts/after';
+'parts/after',
+'parts/contacts';
 
 * {
   padding: 0;
@@ -58,8 +59,4 @@ body {
 
 .link {
   @extend %link-font;
-}
-
-strong::before {
-  content: ' ';
 }
