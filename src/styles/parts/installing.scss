@@ -4,6 +4,9 @@ $marker-distantion: 29px;
   &-list {
     margin-left: $marker-distantion;
     list-style: none;
+    &__short {
+      margin: -25px 0 -15px;
+    }
     &__link {
       font-size: 24px;
       letter-spacing: .1px;
