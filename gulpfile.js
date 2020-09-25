@@ -53,7 +53,11 @@ function buildStyles() {
 }
 
 function buildScripts() {
-  return src('src/scripts/*.js')
+  return src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'src/scripts/*.js'
+  ])
+    .pipe(concat('script.js'))
     .pipe(uglify())
     .pipe(dest('build/scripts/'));
 }

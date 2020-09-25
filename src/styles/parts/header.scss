@@ -11,8 +11,6 @@
   &-container {
     display: grid;
     grid-template-columns: 6fr 1fr 1fr;
-    // justify-content: space-between;
-    // align-items: baseline;
     max-width: 1600px;
     padding: 39px 30px 35px;
     margin: 0 auto; 
@@ -26,10 +24,15 @@
     grid-column: 1;
     display: flex;
     gap: 35px;
+    transition: $animation;
     @include w-to($screen-lg) {
+      position: relative;
+      top: 100px;
+      left: -100%;
       flex-direction: column;
       gap: 17px;
-      margin-bottom: 17px;
+      padding-bottom: 17px;
+      margin-top: -10px;
     }
     &__link {
       @extend %singup-link;
@@ -46,8 +49,13 @@
     align-items: flex-start;
     gap: 17px;
     margin-right: -25px;
+    transition: $animation;
     @include w-to($screen-lg) {
+      position: relative;
+      top: 100px;
+      left: -100%;
       flex-direction: column;
+      padding-bottom: 17px;
     }
 
     &__link {
@@ -66,26 +74,19 @@
     text-align: right;
     @include w-to($screen-lg) {
       position: absolute;
-      left: 35%;
-      top: 40%;
-      height: 60px;
+      left: 31%;
+      top: 36%;
+      height: 58px;
+      margin: 0;
     }
   }
   &-burger {
     display: block;
     position: relative;
     top: 73px;
-    left: 67px;
+    left: 74px;
     width: 60px;
     height: 30px;
-    &-line {
-      position: absolute;
-      background: $highlight-color;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      top: 20px;
-    }
     &:before,
     &:after {
       content: '';
@@ -94,12 +95,47 @@
       left: 0;
       width: 100%;
       height: 5px;
+      transition: $animation;
     }
     &:before {
       top: 0;
     }
     &:after {
       bottom: -14px;
+    }
+
+    &-line {
+      position: absolute;
+      background: $highlight-color;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      top: 20px;
+      transition: $animation;
+    }
+
+  }
+}
+
+.active {
+  & .header-burger-line {
+    transform: scale(0);
+  }
+  &:before {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  &:after {
+    transform: rotate(-45deg);
+    bottom: 5px;
+  }
+
+  & .header {
+    &-singup, &-nav {
+      padding-left: 70px;
+      width: 100%;
+      background: #fff;
+      left: -30px;
     }
   }
 }
