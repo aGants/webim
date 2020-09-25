@@ -27,7 +27,13 @@
 .feedback { @extend %icon-feedback; color: #dab81a;}
 .mobile { @extend %icon-app; color: #88bc17; }
 .msn { @extend %icon-msn; color: #3dd3a1;}
-.yandex { @extend %icon-msn;}
+.yandex { 
+  position: relative;
+  top: 40px;
+  right: 67px;
+  width: 40px;
+  height: 40px;
+  }
 .email { 
   @extend %icon-email; 
   margin-top: 20px;
