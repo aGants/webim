@@ -23,16 +23,8 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('../fonts/fontello.woff2?30297490') format('woff2'),
-  url('../fonts/fontello.woff?30297490') format('woff');
-}
-
-@font-face {
-  font-family: 'fontello';
-  src:url('../font/fontello.woff2?88664942') format('woff2'),
-      url('../font/fontello.woff?88664942') format('woff');
-      font-weight: normal;
-  font-style: normal;
+  src: url('../fonts/fontello.woff2?54793481') format('woff2'),
+  url('../fonts/fontello.woff?54793481') format('woff');
 }
 
 
@@ -47,56 +39,56 @@
 %icon-1 {
   &:after {
   font-family: 'icons';
-  content: '\e820';
+  content: '\e822';
   }
 }
 
 %icon-2 {
   &:after {
     font-family: 'icons';
-    content: '\e814';
+    content: '\e816';
   }
 }
 
 %icon-app {
   &:before {
     font-family: 'icons';
-    content: '\e815';
+    content: '\e817';
   }
 }
 
 %icon-chatbots {
   &:before {
     font-family: 'icons';
-    content: '\e816';
+    content: '\e818';
   }
 }
 
 %icon-email {
   &:before {
     font-family: 'icons';
-    content: '\f0e0';
+    content: '\e800';
   }
 }
 
 %icon-feedback {
   &:before {
     font-family: 'icons';
-    content: '\e817';
+    content: '\e819';
   }
 }
 
 %icon-msn {
   &:before {
     font-family: 'icons';
-    content: '\e818';
+    content: '\e81a';
   }
 }
 
 %icon-sn {
   &:before {
     font-family: 'icons';
-    content: '\e819';
+    content: '\e81b';
   }
 }
 
@@ -104,42 +96,42 @@
   &:before {
     font-weight: 100;
     font-family: 'icons';
-    content: '\e81a';
+    content: '\e81c';
   }
 }
 
 %icon-step-2 {
   &:before {
     font-family: 'icons';
-    content: '\e81b';
+    content: '\e81d';
   }
 }
 
 %icon-step-3 {
   &:before {
     font-family: 'icons';
-    content: '\e81c';
+    content: '\e81e';
   }
 }
 
 %icon-step-4 {
   &:before {
     font-family: 'icons';
-    content: '\e81d';
+    content: '\e81f';
   }
 }
 
 %icon-step-5 {
   &:before {
     font-family: 'icons';
-    content: '\e81e';
+    content: '\e820';
   }
 }
 
 %icon-step-6 {
   &:before {
     font-family: 'icons';
-    content: '\e81f';
+    content: '\e821';
   }
 }
 
@@ -169,3 +161,9 @@
   }
 }
 
+%icon-phone {
+  &:before {
+    font-family: 'icons';
+    content: '\e801';
+  }
+}
