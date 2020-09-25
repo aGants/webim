@@ -36,7 +36,7 @@
       white-space: nowrap;
       color: $second-color;
       background: $title-color;
-      border-color: $second-color;
+      border: 1px solid $second-color;
       &:hover {
         background: $second-color;
         color: $title-color;
