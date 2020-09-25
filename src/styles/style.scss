@@ -19,6 +19,9 @@ body {
   max-width: 1064px;
   padding: 0 20px;
   margin: 0 auto;
+  @include w-to($screen-lg) {
+    padding: 76px 75px;
+  }
 }
 
 .button {
@@ -49,16 +52,28 @@ body {
 
 .title {
   @extend %title-font;
+  @include w-to($screen-lg) {
+    font-size: 48px;
+  }
 }
 
 .text {
   @extend %text-font;
+  @include w-to($screen-lg) {
+    font-size: 26px;
+  }
 }
 
 .big-text {
   @extend %big-text;
+  @include w-to($screen-lg) {
+    font-size: 24px;
+  }
 }
 
 .link {
   @extend %link-font;
+  @include w-to($screen-lg) {
+    font-size: 24px;
+  }
 }
