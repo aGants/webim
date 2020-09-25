@@ -7,8 +7,9 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    width: 1540px;
-    padding: 39px 0 35px;
+    max-width: 1500px;
+    min-width: 1024px;
+    padding: 39px 20px 35px;
     margin: 0 auto;
   }
 
