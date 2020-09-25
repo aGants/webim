@@ -36,6 +36,13 @@ body {
      user-select: none;
      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+  @include w-to($screen-lg) {
+    width: 80vw;
+    height: 90px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    border-radius: 45px;
+  }
 }
 
 .free {
@@ -54,6 +61,8 @@ body {
   @extend %title-font;
   @include w-to($screen-lg) {
     font-size: 48px;
+    letter-spacing: 2px;
+    line-height: 50px;
   }
 }
 
@@ -61,6 +70,7 @@ body {
   @extend %text-font;
   @include w-to($screen-lg) {
     font-size: 26px;
+    line-height: 36px;
   }
 }
 

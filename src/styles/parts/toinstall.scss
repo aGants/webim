@@ -11,6 +11,9 @@
   &-buttons {
     display: flex;
     gap: 19px;
+    @include w-to($screen-lg) {
+      flex-direction: column;
+    }
     &__tarif {
       background: $second-color;
       color: $title-color;
