@@ -1,38 +1,105 @@
 .header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
   height: 100px;
   background: $main-color;
   box-shadow: 15px 0px 7px 3px rgba(50, 50, 50, 0.25);
-
+  @include w-to($screen-lg) {
+  height: 165px;
+  }
   &-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+    // justify-content: space-between;
+    // align-items: baseline;
     max-width: 1600px;
     padding: 39px 30px 35px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    @include w-to($screen-lg) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &-singup {
+    grid-column: 1;
+    display: flex;
+    gap: 35px;
+    @include w-to($screen-lg) {
+      flex-direction: column;
+      gap: 17px;
+      margin-bottom: 17px;
+    }
     &__link {
-      margin-right: 35px;
       @extend %singup-link;
+      @include w-to($screen-lg) {
+        font-size: 28px;
+      }
     }
   }
 
   &-nav {
+    grid-column: 2;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 17px;
+    margin-right: -25px;
+    @include w-to($screen-lg) {
+      flex-direction: column;
+    }
 
     &__link {
       @extend %singup-link;
+      @include w-to($screen-lg) {
+        font-size: 28px;
+      }
     }
 
-    &__img {
-      margin-left: 7px;
-      margin-top: -5px;
-      height: 29px;
+  }
+  &__img {
+    grid-column: 3;
+    margin-left: 50px;
+    margin-top: -5px;
+    height: 29px;
+    text-align: right;
+    @include w-to($screen-lg) {
+      position: absolute;
+      left: 35%;
+      top: 40%;
+      height: 60px;
+    }
+  }
+  &-burger {
+    display: block;
+    position: relative;
+    top: 73px;
+    left: 67px;
+    width: 60px;
+    height: 30px;
+    &-line {
+      position: absolute;
+      background: $highlight-color;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      top: 20px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      background-color: $highlight-color;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 5px;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: -14px;
     }
   }
 }

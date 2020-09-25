@@ -52,6 +52,12 @@ function buildStyles() {
     .pipe(dest('build/styles/'));
 }
 
+function buildScripts() {
+  return src('src/scripts/*.js')
+    .pipe(uglify())
+    .pipe(dest('build/scripts/'));
+}
+
 function buildImages() {
   return src('src/images/**/*.*')
     .pipe(imagemin())
@@ -72,6 +78,7 @@ function watchFiles() {
   watch('src/styles/**/*.scss', buildStyles);
   watch('src/images/**/*.*', buildImages);
   watch('src/fonts/*.*', buildFonts);
+  watch('src/scripts/*.*', buildScripts);
 }
 
 exports.pages = ghPages;
@@ -81,7 +88,7 @@ exports.default =
     parallel(
       devServer,
       series(
-        parallel(buildPages, buildStyles, buildImages, buildFonts),
+        parallel(buildPages, buildStyles, buildImages, buildFonts, buildScripts),
         watchFiles
       )
     )
