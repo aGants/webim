@@ -6,9 +6,17 @@
     gap: 130px;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 50px 20px 60px;
+    padding: 55px 20px 60px;
     font: normal 14px $font-family;
     line-height: 18px;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   &-logo {
     grid-column: 1;
@@ -25,21 +33,23 @@
   &-address {
     grid-column: 2;
     padding-top: 12px;
-    margin-left: 2px;
     &__phone {
       font-size: 24px;
-      color: #fff;
-      @extend %icon-sn;
+      @extend %icon-phone;
       &:before {
         position: relative;
         right: 10px;
-        font-size: 28px;
-        color: #68cdbc;
+        padding: 3px 6px;
+        font-size: 20px;
+        color: $title-color;
+        border-radius: 50px;
+        border-color: #68cdbc;
+        background: #68cdbc;
       }
     }
     &-text {
-      margin-top: 25px;
-      margin-left: -10px;
+      margin-top: 22px;
+      margin-left: -15px;
       font-size: 21px;
       color: #fff;
       &__subtext {
@@ -58,14 +68,9 @@
     &__email {
       display: block;
       margin-bottom: 6px;
-      color: #fff;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
     }
     &__hours {
-      margin: 15px 0 16px;
+      margin: 13px 0 16px;
       color: $footer-color;
     }
     &-soc {
