@@ -1,5 +1,5 @@
 mixin step(number, text)
-  .after-steps
+  p.after-steps
     span(class="after-steps__number step__"+number) Шаг #{number}. 
     span(class="big-text")=text
 
@@ -15,5 +15,5 @@ mixin step(number, text)
       +step('5', 'Регистрация оператора')
       +step('6', 'Тест сервиса')
       .after-buttons
-        button(class="button after-buttons__free free") Все возможности WEBIM
-        button(class="button after-buttons__test") Протестировать бесплатно
+        button(class="button free_after free") Все возможности WEBIM
+        button(class="button test test_after") Протестировать бесплатно

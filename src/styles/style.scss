@@ -79,6 +79,7 @@ body {
   @extend %big-text;
   @include w-to($screen-lg) {
     font-size: 24px;
+    line-height: 30px;
   }
 }
 

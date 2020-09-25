@@ -1,16 +1,30 @@
 .after {
   padding: 66px 0 70px;
   background: $second-color;
+  @include w-to($screen-lg) {
+    margin-top: -65px;
+    padding: 0px 0 0px;
+  }
   &__text {
     margin: 18px 0 38px;
+    @include w-to($screen-lg) {
+      margin: 50px 0 28px;
+    }
   }
   &-steps {
     margin-bottom: 27px;
+    @include w-to($screen-lg) {
+      width: 80%;
+      margin-left: 155px;
+    }
     &__number {
       margin-left: 35px;
       margin-right: 2px;
       font: bold 24px $font-family;
       color: $title-color;
+      @include w-to($screen-lg) {
+        margin-left: -105px;
+      }
       &::before {
         position: relative;
         top: 20px;
@@ -21,6 +35,9 @@
         border: 2px solid $highlight-color;
         border-radius: 100px;
         background: $highlight-color;
+        @include w-to($screen-lg) {
+          font-size: 100px;
+        }
       }
     }
   }
@@ -28,11 +45,17 @@
     margin-top: 92px;
     display: flex;
     gap: 15px; 
-    &__free {
-      width: 270px !important;
+    @include w-to($screen-lg) {
+    flex-direction: column;
     }
-    &__test {
-      width: 280px !important;
+    .free_after {
+      width: 270px;
+      @include w-to($screen-lg) {
+      width: 100%;
+      }
+    }
+    .test_after {
+      width: 280px;
       white-space: nowrap;
       color: $second-color;
       background: $title-color;
@@ -41,6 +64,9 @@
         background: $second-color;
         color: $title-color;
         border: 1px solid $title-color;
+      }
+      @include w-to($screen-lg) {
+        width: 100%;
       }
     }
   }
