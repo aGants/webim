@@ -1,18 +1,25 @@
 .install {
   padding: 174px 0 69px;
   background: $second-color;
+  @include w-to($screen-lg) {
+  padding-bottom: 5px;
+  }
   &__title {
     font-size: 36px;
   }
   &__text {
     width: 635px;
     margin: 30px 0 55px;
+    @include w-to($screen-lg) {
+    margin: 55px 0 90px;
+    }
   }
   &-buttons {
     display: flex;
     gap: 19px;
     @include w-to($screen-lg) {
       flex-direction: column;
+      gap: 31px;
     }
     &__tarif {
       background: $second-color;
