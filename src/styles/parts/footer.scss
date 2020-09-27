@@ -9,6 +9,10 @@
     padding: 55px 20px 60px;
     font: normal 14px $font-family;
     line-height: 18px;
+    @include w-to($screen-lg) {
+      grid-template-columns: 1fr;
+      padding-left: 70px;
+    }
   }
 
   &__link {
@@ -28,6 +32,10 @@
     }
     &__text {
       color: $footer-color;
+      @include w-to($screen-lg) {
+        font-size: 25px;
+        line-height: 32px;
+      }
     }
   }
   &-address {

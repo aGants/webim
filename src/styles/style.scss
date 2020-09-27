@@ -71,7 +71,9 @@ body {
   @extend %text-font;
   @include w-to($screen-lg) {
     font-size: 26px;
+    letter-spacing: 1px;
     line-height: 36px;
+    max-width: 650px;
   }
 }
 
@@ -79,7 +81,9 @@ body {
   @extend %big-text;
   @include w-to($screen-lg) {
     font-size: 24px;
+    letter-spacing: 1px;
     line-height: 30px;
+    max-width: 585px;
   }
 }
 
