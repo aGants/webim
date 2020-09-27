@@ -3,12 +3,19 @@
   background: $second-color;
   @include w-to($screen-lg) {
     margin-top: -65px;
-    padding: 0px 0 0px;
+    padding: 0px 0 20px;
   }
+
+  &__title {
+    @include w-to($screen-lg) {
+      max-width: 520px;
+    }
+  }
+
   &__text {
     margin: 18px 0 38px;
     @include w-to($screen-lg) {
-      margin: 50px 0 28px;
+      margin: 50px 0 10px;
     }
   }
   &-steps {
@@ -37,6 +44,8 @@
         background: $highlight-color;
         @include w-to($screen-lg) {
           font-size: 100px;
+          right: 50px;
+          top: 30px;
         }
       }
     }
@@ -46,7 +55,9 @@
     display: flex;
     gap: 15px; 
     @include w-to($screen-lg) {
-    flex-direction: column;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 145px;
     }
     .free_after {
       width: 270px;
