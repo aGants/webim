@@ -32,10 +32,6 @@
       @include w-range($screen-md, $screen-lg) {
         margin-left: -105px;
       }
-      @include w-to($screen-md) {
-        display: block;
-        margin-bottom: 20px;
-      } 
       &::before {
         position: relative;
         top: 20px;
@@ -51,6 +47,12 @@
           right: 50px;
           top: 30px;
         }
+      }
+    }
+    &__subtitle {
+      @include w-to($screen-md) {
+        display: block;
+        margin-left: 90px;
       }
     }
   }

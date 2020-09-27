@@ -37,7 +37,7 @@
     &__link {
       @extend %singup-link;
       @include w-to($screen-lg) {
-        font-size: 28px;
+        font-size: $burger-menu-size;
       }
     }
   }
@@ -61,7 +61,7 @@
     &__link {
       @extend %singup-link;
       @include w-to($screen-lg) {
-        font-size: 28px;
+        font-size: $burger-menu-size;
       }
     }
 
@@ -74,17 +74,20 @@
     text-align: right;
     @include w-to($screen-lg) {
       position: absolute;
-      left: 31%;
-      top: 36%;
+      left: 40px;
+      right: 0;
+      height: 35px;
+      margin: 0 auto;
+    }
+    @include w-range($screen-md, $screen-lg) {
       height: 58px;
-      margin: 0;
     }
   }
   &-burger {
     display: block;
     position: relative;
-    top: 73px;
-    left: 74px;
+    top: 40%;
+    left: 10vw;
     width: 60px;
     height: 30px;
     &:before,
@@ -132,9 +135,10 @@
 
   & .header {
     &-singup, &-nav {
+      z-index: 1;
       padding-left: 70px;
-      width: 100%;
-      background: #fff;
+      width: 100vw;
+      background: $main-color;
       left: -30px;
     }
   }

@@ -1,7 +1,7 @@
 mixin step(number, text)
   p.after-steps
     span(class="after-steps__number step__"+number) Шаг #{number}. 
-    span(class="big-text")=text
+    span(class="big-text after-steps__subtitle")=text
 
 .after
   .container

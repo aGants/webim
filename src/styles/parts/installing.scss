@@ -5,7 +5,7 @@ $marker-distantion: 29px;
     margin-left: $marker-distantion;
     list-style: none;
     @include w-range($screen-md, $screen-lg) {
-      width: 60vw;
+      width: 50vw;
     }
     &__short {
       margin: -25px 0 -15px;
@@ -46,7 +46,6 @@ $marker-distantion: 29px;
       margin-bottom: 65px;
       @include w-to($screen-lg) {
         margin-bottom: 60px;
-        width: 315px;
       }
     }
   }

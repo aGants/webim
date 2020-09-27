@@ -10,6 +10,7 @@
     margin-top: 35px;
     padding-left: 72px;
     @include w-to($screen-lg) {
+      flex-direction: column;
       gap: 20px 0;
       margin-top: 15px;
       padding-left: 110px;
@@ -53,7 +54,8 @@
   @include w-to($screen-lg) {
     width: 65px;
     height: 65px;
-    right: 100px; 
+    right: 100px;
+    margin: 20px 0; 
   }
   }
 .email { 
@@ -77,4 +79,7 @@
   @extend %icon-chatbots; 
   margin-top: 23px; 
   color: #33afd1;
+  @include w-to($screen-lg) {
+    margin: 0;
+  }
 }

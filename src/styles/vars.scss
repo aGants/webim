@@ -1,6 +1,6 @@
 
 $screen-sm: 320px;
-$screen-md: 768px;
+$screen-md: 750px;
 $screen-lg: 1170px;
 
 $main-color: #fff;
@@ -15,6 +15,8 @@ $footer-color: #adb0c2;
 $font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 $animation: all 0.3s ease 0s;
+
+$burger-menu-size: 26px;
 
 %title-font {
   font: bold 30px $font-family;
