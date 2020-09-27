@@ -72,18 +72,22 @@
       }
     }
     .test_after {
-      width: 290px;
+      width: 280px;
       color: $second-color;
       background: $title-color;
       border: 1px solid $second-color;
+      white-space: nowrap;;
       &:hover {
         background: $second-color;
         color: $title-color;
         border: 1px solid $title-color;
       }
-      @include w-to($screen-lg) {
+      @include w-range($screen-md, $screen-lg) {
         width: 100%;
-        white-space: wrap;
+      }
+      @include w-to($screen-md) {
+        width: 100%;
+        white-space: normal;
       }
     }
   }
