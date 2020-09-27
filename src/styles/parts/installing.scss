@@ -4,7 +4,7 @@ $marker-distantion: 29px;
   &-list {
     margin-left: $marker-distantion;
     list-style: none;
-    @include w-to($screen-lg) {
+    @include w-range($screen-md, $screen-lg) {
       width: 60vw;
     }
     &__short {
@@ -16,10 +16,7 @@ $marker-distantion: 29px;
     &__link {
       font-size: 24px;
       letter-spacing: .1px;
-      @include w-to($screen-lg) {
-        font-size: 30px !important;
-        line-height: 35px !important;
-      }
+      line-height: 30px;
       &::before {
         content: "\2022";
         position: relative;

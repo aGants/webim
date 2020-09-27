@@ -7,7 +7,7 @@
   }
 
   &__title {
-    @include w-to($screen-lg) {
+    @include w-range($screen-md, $screen-lg) {
       max-width: 520px;
     }
   }
@@ -20,7 +20,7 @@
   }
   &-steps {
     margin-bottom: 27px;
-    @include w-to($screen-lg) {
+    @include w-range($screen-md, $screen-lg) {
       width: 80%;
       margin-left: 155px;
     }
@@ -29,9 +29,13 @@
       margin-right: 2px;
       font: bold 24px $font-family;
       color: $title-color;
-      @include w-to($screen-lg) {
+      @include w-range($screen-md, $screen-lg) {
         margin-left: -105px;
       }
+      @include w-to($screen-md) {
+        display: block;
+        margin-bottom: 20px;
+      } 
       &::before {
         position: relative;
         top: 20px;
@@ -42,7 +46,7 @@
         border: 2px solid $highlight-color;
         border-radius: 100px;
         background: $highlight-color;
-        @include w-to($screen-lg) {
+        @include w-range($screen-md, $screen-lg) {
           font-size: 100px;
           right: 50px;
           top: 30px;
@@ -62,12 +66,11 @@
     .free_after {
       width: 270px;
       @include w-to($screen-lg) {
-      width: 100%;
+        width: 100%;
       }
     }
     .test_after {
-      width: 280px;
-      white-space: nowrap;
+      width: 290px;
       color: $second-color;
       background: $title-color;
       border: 1px solid $second-color;
@@ -78,6 +81,7 @@
       }
       @include w-to($screen-lg) {
         width: 100%;
+        white-space: wrap;
       }
     }
   }

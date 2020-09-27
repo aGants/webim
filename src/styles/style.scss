@@ -19,10 +19,19 @@ body {
   max-width: 1064px;
   padding: 0 20px;
   margin: 0 auto;
-  @include w-to($screen-lg) {
+  @include w-to($screen-md) {
+    width: 100%;
+    padding: 76px 10px;
+  }
+  @include w-range($screen-md, $screen-lg) {
     width: 100%;
     padding: 76px 65px;
   }
+}
+
+.main {
+  width: 100vw;
+  overflow: hidden;
 }
 
 .button {
@@ -37,12 +46,16 @@ body {
      user-select: none;
      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  @include w-to($screen-lg) {
+  @include w-range($screen-md, $screen-lg) {
     width: 80vw;
     height: 90px;
     font-size: 24px;
     letter-spacing: 2px;
     border-radius: 45px;
+  }
+  @include w-to($screen-md) {
+    width: 94vw;
+    font-size: 20px;
   }
 }
 
@@ -60,16 +73,17 @@ body {
 
 .title {
   @extend %title-font;
-  @include w-to($screen-lg) {
-    font-size: 48px;
+  @include w-range($screen-md, $screen-lg) {
+    font-size: 46px;
     letter-spacing: 2px;
     line-height: 50px;
+    word-wrap: break-word;
   }
 }
 
 .text {
   @extend %text-font;
-  @include w-to($screen-lg) {
+  @include w-range($screen-md, $screen-lg) {
     font-size: 26px;
     letter-spacing: 1px;
     line-height: 36px;
@@ -80,16 +94,18 @@ body {
 .big-text {
   @extend %big-text;
   @include w-to($screen-lg) {
+    line-height: 30px;
+  }
+  @include w-range($screen-md, $screen-lg) {
     font-size: 24px;
     letter-spacing: 1px;
     line-height: 30px;
-    max-width: 585px;
   }
 }
 
 .link {
   @extend %link-font;
-  @include w-to($screen-lg) {
+  @include w-range($screen-md, $screen-lg) {
     font-size: 24px;
     line-height: 32px;
   }

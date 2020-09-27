@@ -5,7 +5,7 @@
   }
   &__title {
     @include w-to($screen-lg) {
-      width: 250px;
+      max-width: 250px;
     }
   }
   &__text {
@@ -18,9 +18,9 @@
     display: flex;
     gap: 150px;
     @include w-to($screen-lg) {
-      width: 60vw;
-      gap: 167px;
+      gap: 60px 167px;
       margin-left: 43px;
+      flex-wrap: wrap;
     }
     &__number {
       margin-left: -50px;

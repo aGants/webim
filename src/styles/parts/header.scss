@@ -6,7 +6,7 @@
   background: $main-color;
   box-shadow: 15px 0px 7px 3px rgba(50, 50, 50, 0.25);
   @include w-to($screen-lg) {
-  height: 165px;
+    height: 165px;
   }
   &-container {
     display: grid;

@@ -1,5 +1,6 @@
 
 $screen-sm: 320px;
+$screen-md: 768px;
 $screen-lg: 1170px;
 
 $main-color: #fff;
@@ -31,7 +32,7 @@ $animation: all 0.3s ease 0s;
 }
 
 %big-text {
-  width: 700px;
+  max-width: 700px;
   font: normal 18px $font-family;
   color: $title-color;
   line-height: 20px;
