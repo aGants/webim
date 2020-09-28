@@ -40,6 +40,7 @@ body {
   text-transform: uppercase;
   border-radius: 24px;
   cursor: pointer;
+  transition: .5s linear;
   &:active, &:focus {
     outline: none;
      user-select: none;
@@ -108,4 +109,15 @@ body {
     font-size: 24px;
     line-height: 32px;
   }
+}
+
+.big-title {
+  position: fixed;
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  width: 100%;
+  background: #efc47D;
+  text-align: left;
+  padding-left: 20px;
 }
