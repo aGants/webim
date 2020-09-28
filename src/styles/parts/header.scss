@@ -5,8 +5,10 @@
   height: 100px;
   background: $main-color;
   box-shadow: 15px 0px 7px 3px rgba(50, 50, 50, 0.25);
+  overflow: hidden;
   @include w-to($screen-lg) {
     height: 165px;
+    overflow: visible;
   }
   &-container {
     display: grid;
@@ -21,6 +23,8 @@
   }
 
   &-singup {
+    position: relative;
+    z-index: 2;
     grid-column: 1;
     display: flex;
     gap: 35px;
@@ -135,11 +139,23 @@
 
   & .header {
     &-singup, &-nav {
-      z-index: 1;
       padding-left: 70px;
       width: 100vw;
       background: $main-color;
       left: -30px;
     }
   }
+}
+
+.circle {
+  position: relative;
+  z-index: 1;
+  bottom: 250px;
+  left: -200px;
+  width: 60vw;
+  height: 300px;
+  transform: rotate(-20deg);
+  background: linear-gradient(to bottom right, #0f9fb4, #00e3cf);
+  box-shadow: 15px 0px 7px 5px rgba(50, 50, 50, 0.25);
+  border-radius: 35%;
 }
