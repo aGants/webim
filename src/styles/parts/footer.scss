@@ -83,10 +83,34 @@
     &-soc {
       font-size: 20px;
       color: $footer-color;
-      &__vk { @extend %icon-vk; margin-right: 22px; }
-      &__fb { @extend %icon-fb; margin-right: 25px; }
-      &__tw { @extend %icon-tw; margin-right: 25px; }
-      &__skype { @extend %icon-skype; }
+      cursor: pointer;
+      &__vk { 
+        @extend %icon-vk; 
+        margin-right: 22px; 
+        &:hover {
+          filter: opacity(80%);
+        }
+      }
+      &__fb { 
+        @extend %icon-fb; 
+        margin-right: 25px; 
+        &:hover {
+          filter: opacity(80%);
+        }
+        }
+      &__tw { 
+        @extend %icon-tw; 
+        margin-right: 25px; 
+        &:hover {
+          filter: opacity(80%);
+        }
+      }
+      &__skype { 
+        @extend %icon-skype; 
+        &:hover {
+          filter: opacity(80%);
+        }
+      }
     }
   }
 }
